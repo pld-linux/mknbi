@@ -11,7 +11,7 @@ Source0:	http://etherboot.sourceforge.net/%{name}-%{version}.tar.gz
 Patch0:		%{name}-oformat.patch
 URL:		http://etherboot.sourceforge.net/
 BuildRequires:	perl >= 5.6
-ExlusiveArch:	%{ix86}
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,14 +47,12 @@ rm -rf $RPM_BUILD_ROOT
 	PREFIX=%{_prefix} \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf LOG README RELNOTES spec.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz *.html
+%doc *.html LOG README RELNOTES spec.txt 
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/di*
