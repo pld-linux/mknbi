@@ -1,5 +1,5 @@
 %include        /usr/lib/rpm/macros.perl     
-Summary:	utility for creating network bootable images
+Summary:	Utility for creating network bootable images
 Summary(pl):	Narzêdzia umo¿liwiaj±ce tworzenie startowalnych przez sieæ obrazów
 Name:		mknbi
 Version:	1.2
@@ -10,7 +10,7 @@ Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	http://etherboot.sourceforge.net/%{name}-%{version}.tar.gz
 Patch0:		%{name}-oformat.patch
-URL:		http://etherboot.sourceforge.neti/
+URL:		http://etherboot.sourceforge.net/
 BuildRequires:	perl >= 5.6
 ExcludeArch:	alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,7 +21,7 @@ images, Linux kernels, FreeDOS and DOS bootable floppy images.
 
 %description -l pl
 Narzêdzia korzystaj±ce z obrazów Etherboot do tworzenia startowalnych
-obrazów z obrazów ROM, kerneli Linuxa, obrazów FreeDOS oraz DOS.
+obrazów z obrazów ROM, kerneli Linuksa, obrazów FreeDOS oraz DOS.
 
 %prep
 %setup -q
