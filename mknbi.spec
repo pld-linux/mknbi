@@ -28,7 +28,8 @@ obrazów z obrazów ROM, kerneli Linuxa, obrazów FreeDOS oraz DOS.
 
 %build
 %{__make} \
-	PREFIX=%{_prefix}
+	PREFIX=%{_prefix} \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
