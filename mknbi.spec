@@ -8,6 +8,7 @@ Release:	4
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://etherboot.sourceforge.net/%{name}-%{version}.tar.gz
+# Source0-md5:	9fdfb5c75311126d95ecb0ee575c8485
 Patch0:		%{name}-oformat.patch
 URL:		http://etherboot.sourceforge.net/
 BuildRequires:	perl >= 5.6
