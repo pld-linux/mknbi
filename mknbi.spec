@@ -3,13 +3,12 @@ Summary:	Utility for creating network bootable images
 Summary(pl):	Narzêdzia umo¿liwiaj±ce tworzenie startowalnych przez sieæ obrazów
 Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede
 Name:		mknbi
-Version:	1.2
-Release:	5
+Version:	1.4.3
+Release:	1
 License:	GPL v2+
 Group:		Applications/System
-Source0:	http://etherboot.sourceforge.net/%{name}-%{version}.tar.gz
-# Source0-md5:	9fdfb5c75311126d95ecb0ee575c8485
-Patch0:		%{name}-oformat.patch
+Source0:	http://dl.sourceforge.net/etherboot/%{name}-%{version}.tar.gz
+# Source0-md5:	1f5ae9a4431caa70e34d2116c7f3a465
 URL:		http://etherboot.sourceforge.net/
 BuildRequires:	perl-base >= 1:5.6
 ExclusiveArch:	%{ix86}
@@ -33,12 +32,11 @@ inicializem via rede.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__make} \
-	PREFIX=%{_prefix} \
-	CFLAGS="%{rpmcflags}"
+	CC="%{__cc}" \
+	PREFIX=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -53,13 +51,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.html LOG README RELNOTES spec.txt
+%doc *.html LOG README spec.txt
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/di*
 %attr(755,root,root) %{_libdir}/%{name}/mknbi
+%attr(755,root,root) %{_libdir}/%{name}/nbitoelf
+%{_libdir}/%{name}/*.bin
 %{_libdir}/%{name}/*.pm
 %{_libdir}/%{name}/first*
 %{_libdir}/%{name}/menu
 %{_libdir}/%{name}/rm*
+%{_libdir}/%{name}/lua
+%{_libdir}/%{name}/nfl
 %attr(644,root,root) %{_mandir}/man?/*
