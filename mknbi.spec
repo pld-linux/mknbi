@@ -1,4 +1,4 @@
-%include        /usr/lib/rpm/macros.perl     
+%include        /usr/lib/rpm/macros.perl
 Summary:	Utility for creating network bootable images
 Summary(pl):	Narzêdzia umo¿liwiaj±ce tworzenie startowalnych przez sieæ obrazów
 Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede.
@@ -19,16 +19,16 @@ Utility that accompanies Etherboot for making tagged images from ROM
 images, Linux kernels, FreeDOS and DOS bootable floppy images.
 
 %description -l es
-Paquete de soporte para permitir a un PC la inicalización
-con etherboot.
+Paquete de soporte para permitir a un PC la inicalización con
+etherboot.
 
 %description -l pl
 Narzêdzia korzystaj±ce z obrazów Etherboot do tworzenia startowalnych
 obrazów z obrazów ROM, kerneli Linuksa, obrazów FreeDOS oraz DOS.
 
 %description -l pt_BR
-Pacote responsável por modificar imagens para permitir que PCs inicializem
-via rede.
+Pacote responsável por modificar imagens para permitir que PCs
+inicializem via rede.
 
 %prep
 %setup -q
