@@ -4,14 +4,14 @@ Summary(pl):	Narzêdzia umo¿liwiaj±ce tworzenie startowalnych przez sieæ obrazów
 Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede
 Name:		mknbi
 Version:	1.2
-Release:	4
+Release:	5
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://etherboot.sourceforge.net/%{name}-%{version}.tar.gz
 # Source0-md5:	9fdfb5c75311126d95ecb0ee575c8485
 Patch0:		%{name}-oformat.patch
 URL:		http://etherboot.sourceforge.net/
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl-base >= 1:5.6
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
