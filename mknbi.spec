@@ -1,7 +1,7 @@
 %include        /usr/lib/rpm/macros.perl
 Summary:	Utility for creating network bootable images
 Summary(pl):	Narzêdzia umo¿liwiaj±ce tworzenie startowalnych przez sieæ obrazów
-Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede.
+Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede
 Name:		mknbi
 Version:	1.2
 Release:	4
