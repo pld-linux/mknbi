@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.html LOG README RELNOTES spec.txt 
+%doc *.html LOG README RELNOTES spec.txt
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/di*
