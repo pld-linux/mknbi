@@ -7,8 +7,6 @@ Version:	1.2
 Release:	3
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	http://etherboot.sourceforge.net/%{name}-%{version}.tar.gz
 Patch0:		%{name}-oformat.patch
 URL:		http://etherboot.sourceforge.net/
