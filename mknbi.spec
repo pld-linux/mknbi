@@ -5,7 +5,7 @@ Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede.
 Name:		mknbi
 Version:	1.2
 Release:	4
-License:	GPL
+License:	GPL v2
 Group:		Applications/System
 Source0:	http://etherboot.sourceforge.net/%{name}-%{version}.tar.gz
 Patch0:		%{name}-oformat.patch
