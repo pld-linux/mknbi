@@ -1,9 +1,10 @@
 %include        /usr/lib/rpm/macros.perl     
 Summary:	Utility for creating network bootable images
 Summary(pl):	Narzêdzia umo¿liwiaj±ce tworzenie startowalnych przez sieæ obrazów
+Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede.
 Name:		mknbi
 Version:	1.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
@@ -19,9 +20,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Utility that accompanies Etherboot for making tagged images from ROM
 images, Linux kernels, FreeDOS and DOS bootable floppy images.
 
+%description -l es
+Paquete de soporte para permitir a un PC la inicalización
+con etherboot.
+
 %description -l pl
 Narzêdzia korzystaj±ce z obrazów Etherboot do tworzenia startowalnych
 obrazów z obrazów ROM, kerneli Linuksa, obrazów FreeDOS oraz DOS.
+
+%description -l pt_BR
+Pacote responsável por modificar imagens para permitir que PCs inicializem
+via rede.
 
 %prep
 %setup -q
@@ -47,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc *.gz *.html
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/di*
