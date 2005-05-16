@@ -3,14 +3,14 @@ Summary:	Utility for creating network bootable images
 Summary(pl):	Narzêdzia umo¿liwiaj±ce tworzenie startowalnych przez sieæ obrazów
 Summary(pt_BR):	Utilitário para criação de imagens para inicialização via rede
 Name:		mknbi
-Version:	1.4.3
+Version:	1.4.4
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/etherboot/%{name}-%{version}.tar.gz
-# Source0-md5:	1f5ae9a4431caa70e34d2116c7f3a465
+# Source0-md5:	5ddafef0a582cfb2b3cd30951662e6e2
 URL:		http://etherboot.sourceforge.net/
-BuildRequires:	perl-base >= 1:5.6
+BuildRequires:	rpm-perlprov
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
