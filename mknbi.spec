@@ -9,6 +9,7 @@ License:	GPL v2+
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/etherboot/%{name}-%{version}.tar.gz
 # Source0-md5:	5ddafef0a582cfb2b3cd30951662e6e2
+Patch0:		%{name}-gcc4.patch
 URL:		http://etherboot.sourceforge.net/
 BuildRequires:	rpm-perlprov
 ExclusiveArch:	%{ix86}
@@ -32,6 +33,7 @@ inicializem via rede.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
@@ -64,4 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/%{name}/rm*
 %{_libdir}/%{name}/lua
 %{_libdir}/%{name}/nfl
-%attr(644,root,root) %{_mandir}/man?/*
+%{_mandir}/man?/*
